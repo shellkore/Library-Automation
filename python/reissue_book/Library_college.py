@@ -111,7 +111,7 @@ if no_of_books is not 0:
                         print('RETURN NEEDED !!!')
                         print('You need to return ""'+book[i].text+'"" today. ')
                         #function to send self-reminder in user's email
-                        send() 
+                        send(book[i].text) 
 
 #closing browser/webdriver
 browser.close()

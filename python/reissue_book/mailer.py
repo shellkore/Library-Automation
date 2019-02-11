@@ -1,6 +1,5 @@
-def send():
+def send(bookname):
 	import smtplib
-
 	smtp = smtplib.SMTP('smtp.gmail.com',587)
 
 	smtp.starttls()		#starting transport layer security
@@ -10,7 +9,7 @@ def send():
 
 	smtp.login(data['email'],data['emailpass'])
 
-	message = "Self reminding for library book reissue"
+	message = "You need to manually reissue the book ${bookname}"
 
 	smtp.sendmail(data['email'],data['email'], message)
 
